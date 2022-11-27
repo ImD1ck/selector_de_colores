@@ -1,6 +1,3 @@
 # Selector de Colores
 
-## Instalaciones
-Vite, Express, react-icons, react-color, mysql2, morgan, axios, nodemon, cors.
-
-(Actualizando repo con nuevos cambios - ejercicio Fork-Sebas)
+Aplicacion para crear paletas de colores que guarda las paletas en una base de datos MySQL, hecha con react y express
