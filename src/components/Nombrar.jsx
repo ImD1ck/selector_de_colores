@@ -6,13 +6,14 @@ import "../styles/Nombrar.css";
 
 const Nombrar = ({ setSavedPallette, currentPalette, resetPallette }) => {
   const [nombre, setNombre] = useState("");
+
   const handleClick = async () => {
     if (nombre == "") {
-      alert("Necesitas colocar un nombre");
+      alert("Please enter a name");
       return;
     }
     if (currentPalette.some((vacio) => vacio === "")) {
-      alert("Tienes que rellenar todo");
+      alert("Please fill all the colors");
       return;
     }
     const {
@@ -20,6 +21,8 @@ const Nombrar = ({ setSavedPallette, currentPalette, resetPallette }) => {
     } = await createPaletaRequest({
       nombre,
       paleta: currentPalette,
+    }).catch((err) => {
+      alert("Error saving palette, check the console");
     });
     setSavedPallette((prev) => [
       ...prev,

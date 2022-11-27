@@ -17,7 +17,16 @@ function App() {
   );
   const [color, setColor] = useState("");
   const [currentPosition, setCurrentPosition] = useState(0);
-  const [savedPallette, setSavedPallette] = useState([]);
+  // const [savedPallette, setSavedPallette] = useState([]);
+
+  //Example initial state
+  const [savedPallette, setSavedPallette] = useState([
+    {
+      id: 1,
+      nombre: "Example",
+      paleta: ["#000", "#aaa", "#b1b", "#f5f", "#fff"],
+    },
+  ]);
 
   const resetPallette = () => setCurrentPalette(currentPaletteInitalState);
 
